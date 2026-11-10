@@ -22,4 +22,4 @@ DDEFS += -DRAM_UNUSED_SIZE=100
 # This board uses ChibiOS MFS driver on external SPI flash
 include $(PROJECT_DIR)/hw_layer/ports/stm32/use_higher_level_flash_api.mk
 #Serial flash driver
-include $(PROJECT_DIR)/hw_layer/drivers/flash/sst26f_jedec.mk
+include $(PROJECT_DIR)/hw_layer/drivers/flash/sst26f/sst26f_jedec.mk
