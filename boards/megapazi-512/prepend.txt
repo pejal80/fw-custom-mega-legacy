@@ -1,0 +1,87 @@
+! BENCH ONLY: GPIOs not yet validated for PAZI UA4C
+#define MAIN_HELP_URL "https://wiki.mazduino.com/"
+#define RE_auto_update_root_url "https://mazduino.github.io/mazduino-fw/ini/"
+#define RE_obfuscated "false"
+#define WIKI_CAN_SENSORS https://wiki.mazduino.com/firmware/can-sensor-input/
+#define WIKI_CAN_OUTPUTS https://wiki.mazduino.com/firmware/can-output/
+#define WIKI_USER_TABLES https://wiki.mazduino.com/firmware/user-tables/
+#define WIKI_LOGIC_OUTPUTS https://wiki.mazduino.com/firmware/logic-outputs/
+#define WIKI_MATH_CHANNELS https://wiki.mazduino.com/firmware/math-channels/
+
+! 512KB flash variant: ETB, knock, TCU, EGT, boost, launch, alternator disabled
+#define ts_show_etb false
+#define ts_show_etb_pins false
+#define ts_show_traction_control false
+#define ts_show_tcu false
+#define ts_show_software_knock false
+#define ts_show_injectionPinMode true
+#define ts_show_output_diag true
+#define ts_show_gdi false
+#define ts_show_k_line false
+#define ts_show_hip9011 false
+#define show_tcu_gauges false
+#define MAX_TPS_PPS_DISCREPANCY 10
+#define ts_show_communityCommsLedPin true
+
+! Status LED at PB7
+#define ts_show_status_leds true
+#define ts_show_experimental false
+
+! Alternator and main relay not wired
+#define ts_show_alternator false
+#define ts_show_main_relay false
+
+! SD card disabled on this board
+#define ts_show_sd_card false
+#define ts_show_sd_pins false
+
+! Not applicable engine types/features
+#define ts_show_rotary false
+#define ts_show_hd false
+#define ts_show_torque_model false
+#define ts_show_virtual_dyno false
+
+! Engine stimulator / emulator disabled
+#define ts_show_ecu_stimulator false
+#define ts_show_hardware_simulator false
+
+! Vehicle speed sensor not used
+#define ts_show_speedo_settings false
+
+! Forced induction / boost control disabled on 512KB variant
+#define ts_show_forced_induction false
+
+! WBO firmware update disabled
+
+! LTFT SD card message not relevant (no SD card)
+#define ts_show_ltft_sd_card_message false
+
+! VVT output disabled (VVT PID off)
+#define ts_show_vvt_output false
+#define ts_show_vvt_output_pin false
+#define ts_show_vvt_frequency false
+#define ts_show_wbo_can_menu true
+#define ts_show_wbo_canbus_set_type true
+#define ts_show_wbo_canbus_set_index true
+#define ts_show_wbo_canbus_index true
+#define ts_show_cylinder_2 true
+#define ts_show_cylinder_3 true
+#define ts_show_cylinder_4 true
+#define ts_show_cylinder_5 true
+#define ts_show_cylinder_6 true
+#define ts_show_cylinder_7 true
+#define ts_show_cylinder_8 true
+#define ts_show_cylinder_9 true
+#define ts_show_cylinder_10 true
+#define ts_show_cylinder_11 true
+#define ts_show_cylinder_12 true
+#define ts_show_cylinder_bank true
+#define ts_show_number_of_cylinders true
+#define ts_show_drv8860 false
+#define ts_show_tle6240 false
+#define ts_show_mc33810_cs false
+#define ts_show_mc33810 false
+#define ts_show_spi4_enable false
+#define ts_show_spi5_enable false
+#define ts_show_spi6_enable false
+#define ts_show_vbatt_adc false
