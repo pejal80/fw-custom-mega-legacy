@@ -1,0 +1,3 @@
+# Current upstream rusEFI does not define Mazduino virtual CAN GPIO aliases.
+# Only physical MCU CAN pins in board_configuration.cpp remain configured.
+pins: []
