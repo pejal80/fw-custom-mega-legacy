@@ -2,7 +2,7 @@ name: Build PAZI Mega Legacy 512KB (bench only)
 
 on:
   push:
-    branches: [main, feature/megapazi-512-internal-flash]
+    branches: [main, feature/megapazi-512-internal-flash, feature/pazi-ua4c-reference-full-512]
     paths:
       - 'boards/megapazi-512/**'
       - '.github/workflows/build-megapazi-512.yaml'
