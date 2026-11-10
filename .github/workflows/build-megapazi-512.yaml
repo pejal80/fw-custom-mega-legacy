@@ -1,0 +1,41 @@
+name: Build PAZI Mega Legacy 512KB (bench only)
+
+on:
+  push:
+    branches: [main, feature/megapazi-512-internal-flash]
+    paths:
+      - 'boards/megapazi-512/**'
+      - '.github/workflows/build-megapazi-512.yaml'
+  pull_request:
+    paths:
+      - 'boards/megapazi-512/**'
+      - '.github/workflows/build-megapazi-512.yaml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-megapazi-512:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+
+      - name: Checkout public rusEFI core
+        run: |
+          rm -rf ext/rusefi
+          git clone --depth=1 https://github.com/rusefi/rusefi.git ext/rusefi
+
+      - name: Stamp firmware build date
+        run: |
+          printf '#pragma once\n#define VCS_DATE %s\n' "$(date +%Y%m%d)" > ext/rusefi/firmware/controllers/date_stamp.h
+
+      - uses: ./ext/rusefi/.github/workflows/custom-board-build
+        with:
+          meta_info: boards/megapazi-512/meta-info.env
+          artifacts: bin srec hex list map elf bundle autoupdate
+          uploads: ini
+          push: 'false'
+          run_simulator: 'false'
